@@ -10,13 +10,14 @@ elif sandwhich == "beef":
 else:
   print("you picked tofu")
   cost = 5.75
+
 beverage = input("Would you like a beverage?: ")
 if beverage == "yes":
-  size = input("Small, Medium, or Large?: ")
-  if size == "small":
+  sizeb = input("Small, Medium, or Large?: ")
+  if sizeb == "small":
     print("You picked small")
     cost = cost + 1.00
-  elif size == "medium":
+  elif sizeb == "medium":
     print("You picked medium")
     cost = cost + 1.75
   else:
@@ -24,4 +25,23 @@ if beverage == "yes":
     cost = cost + 2.25
 else:
   print("You picked no beverage")
-print("Your total cost is $"+str(cost))
+
+fries = input("Would you like some french fries?: ")
+if fries == "yes":
+  sizef = input("Small, Medium, or Large?: ")
+  if sizef == "small":
+    sure = input("Would you like to megasize your fries to the large size for only one more dollar?: )
+    if sure == "yes":
+      print("You picked large")
+      cost = cost + 2.00
+    else:
+      print("You picked small")
+      cost = cost + 1.00
+  elif sizef == "medium":
+    print("You picked medium")
+    cost = cost + 1.50
+  else:
+    print("You picked Large")
+    cost = cost + 2.00
+print("Your total cost so far is $"+str(cost))
+
